@@ -1,6 +1,6 @@
 import{mkdir,writeFile}from'node:fs/promises';import{dirname}from'node:path';
 const F={
-'next.config.ts':`import type{NextConfig}from"next";const c:NextConfig={output:"export",images:{unoptimized:true}};export default c;`,
+'next.config.ts':`import type{NextConfig}from"next";const c:NextConfig={images:{unoptimized:true}};export default c;`,
 'tsconfig.json':JSON.stringify({compilerOptions:{target:"ES2017",lib:["dom","dom.iterable","esnext"],strict:true,noEmit:true,skipLibCheck:true,esModuleInterop:true,module:"esnext",moduleResolution:"bundler",resolveJsonModule:true,isolatedModules:true,jsx:"preserve",plugins:[{name:"next"}],paths:{"@/*":["./*"]}},include:["next-env.d.ts","**/*.ts","**/*.tsx",".next/types/**/*.ts"],exclude:["node_modules"]}),
 'next-env.d.ts':'/// <reference types="next" />\n/// <reference types="next/image-types/global" />',
 'postcss.config.mjs':'export default{plugins:{"@tailwindcss/postcss":{}}};',
