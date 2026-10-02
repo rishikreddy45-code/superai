@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "node build-site.mjs",
+    "predev": "node build-site.mjs && node fix-css.mjs",
     "dev": "next dev",
-    "prebuild": "node build-site.mjs",
+    "prebuild": "node build-site.mjs && node fix-css.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
